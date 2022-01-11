@@ -4,11 +4,13 @@ import AdminProvider from "./context/AdminProvider";
 import AddPage from "./pages/AddPage";
 import AdminPanel from "./pages/AdminPanel";
 import HomePage from "./pages/HomePage";
+import MyNavBar from "./components/MyNavBar";
 
 const MyRoutes = () => {
   return (
     <AdminProvider>
       <BrowserRouter>
+        <MyNavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/add" element={<AddPage />} />
