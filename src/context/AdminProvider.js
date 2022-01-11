@@ -1,6 +1,8 @@
 import React from "react";
+import axios from "axios";
+import { API } from "../helpers/const";
 
-const AdminContext = React.createContext();
+export const AdminContext = React.createContext();
 
 const Init_State = {};
 
@@ -11,12 +13,26 @@ const reducer = (state, action) => {
   }
 };
 
-const AdminProvider = () => {
+const AdminProvider = (props) => {
   const [state, dispatch] = React.useReducer(reducer, Init_State);
 
   // ! Create
 
-  return <div></div>;
+  const addProduct = async (product) => {
+    try {
+      await axios.post(API, { ...product, price: +product.price });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // ! Read
+
+  return (
+    <AdminContext.Provider value={{ addProduct }}>
+      {props.children}
+    </AdminContext.Provider>
+  );
 };
 
 export default AdminProvider;
