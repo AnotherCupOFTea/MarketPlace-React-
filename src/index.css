@@ -12,6 +12,85 @@ code {
     monospace;
 }
 
+
+
+/* Navbar */
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.navbar-left{
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left img{
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar-left img:hover{
+  border-bottom: 1px solid #000;
+}
+
+.search{
+  margin-left: 30px;
+}
+
+.search input{
+  border: 1px solid rgb(226, 34, 0);
+  outline: none;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 16px;
+}
+
+.navbar-menu ul{
+  display: flex;
+}
+
+.navbar-menu{
+  margin-top: 10px;
+}
+
+.navbar-menu ul li{
+  text-decoration: transparent;
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+.navbar-menu ul li a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 5px 30px;
+  background-color: rgb(226, 34, 0);
+  border-radius: 50px;
+  border: 1px solid transparent;
+  transition: 0.5s all ease;
+}
+
+.navbar-menu ul li a:hover{
+   background: transparent;
+   border: 1px solid rgb(226, 34, 0);
+   color: rgb(226, 34, 0);
+}
+
+.navbar-right p{
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.navbar-right{
+  display: flex;
+  align-items: center;
+}
+
+
 .form-add_title {
   display: flex;
   justify-content: center;
@@ -22,3 +101,4 @@ a {
   text-decoration: none;
   color:  inherit;
 }
+
