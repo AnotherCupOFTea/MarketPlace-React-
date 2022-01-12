@@ -1,12 +1,12 @@
 {
   "menu": [
     {
-      "name": "Asian",
-      "description": "Моцарелла, сладкий перец, томаты, красный лук, фарш из говядины, сушеный перец, чили, томатный соус",
+      "name": "Four Cheeses",
+      "description": "Увеличенная порция моцареллы, сыры чеддер и пармезан, соус альфредо",
       "category": "Pizza",
-      "price": 400,
-      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/1ee83fd7a0444e7c90bf593fdea61801_292x292.jpeg",
-      "id": 2
+      "price": 360,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/9d51c6a71e514923a655579ff838ac1c_292x292.jpeg",
+      "id": 3
     }
   ]
 }
