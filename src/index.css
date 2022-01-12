@@ -55,7 +55,11 @@ code {
 }
 
 .navbar-menu{
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
+  margin-left: -30px;
+  background: rgb(190, 188, 188);
 }
 
 .navbar-menu ul li{
