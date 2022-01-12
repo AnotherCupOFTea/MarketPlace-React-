@@ -13,6 +13,7 @@ code {
 }
 
 
+
 /* Navbar */
 
 .navbar{
@@ -87,5 +88,17 @@ code {
 .navbar-right{
   display: flex;
   align-items: center;
+}
+
+
+.form-add_title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color:  inherit;
 }
 
