@@ -9,12 +9,36 @@
       "id": 3
     },
     {
-      "name": "Four Cheeses",
-      "description": "Увеличенная порция моцареллы, сыры чеддер и пармезан, соус альфредо",
-      "category": "Other",
-      "price": 360,
-      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/9d51c6a71e514923a655579ff838ac1c_292x292.jpeg",
-      "id": 4
+      "name": "Pepperoni",
+      "description": "Something",
+      "category": "Pizza",
+      "price": 400,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/596c4ae43b6a4963824952c9fca49fd8_292x292.jpeg",
+      "id": 5
+    },
+    {
+      "name": "Ham and Cheese",
+      "description": "Ветчина из цыпленка, моцарелла, соус альфредо",
+      "category": "Pizza",
+      "price": 350,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/62a2d1b3-fda4-41c9-8697-78b591595d9c.jpg",
+      "id": 6
+    },
+    {
+      "name": "Margarite",
+      "description": "Увеличенная порция моцареллы, томаты, итальянские травы, томатный соус",
+      "category": "Pizza",
+      "price": 420,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/627623c8-98da-4bae-aeab-6a9b2f0d838b.jpg",
+      "id": 7
+    },
+    {
+      "name": "Dodster",
+      "description": "Легендарная горячая закуска с цыплёнком, томатами, моцареллой, соусом ранч в тонкой пшеничной лепешке",
+      "category": "Snacks",
+      "price": 140,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/c7438015dcc24d599daa02db7ff79be6_292x292.jpeg",
+      "id": 8
     }
   ]
 }

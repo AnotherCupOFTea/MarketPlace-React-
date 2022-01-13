@@ -14,7 +14,7 @@ const HomeMenu = () => {
           <a href="#">Закуски</a>
         </li>
         <li>
-          <a href="#">Десерти</a>
+          <a href="#">Десерты</a>
         </li>
         <li>
           <a href="#">Напитки </a>
