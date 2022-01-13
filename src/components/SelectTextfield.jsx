@@ -41,7 +41,10 @@ export default function SelectTextField({ handleInput }) {
       label="Select"
       value={currency}
       sx={{ mt: 2 }}
-      onChange={(handleChange, handleInput)}
+      onChange={(event) => {
+        handleChange(event);
+        handleInput(event);
+      }}
     >
       {currencies.map((option) => (
         <MenuItem key={option.value} value={option.value}>

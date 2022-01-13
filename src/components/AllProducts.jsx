@@ -17,7 +17,27 @@ const AllProducts = () => {
             <Grid container spacing={4}>
                 {products.map((item) => (
                     <Grid key={item.id} item xs={12} sm={6} md={4}>
-                        <ProductCard product={item}/>
+                        <div id="pizza">
+                            {item.category=== "Pizza" ? <ProductCard product={item}/> : item}
+                           
+                        </div>
+                        <div id="pizza">
+                            {item.category=== "Snacks" ? <ProductCard product={item}/> : item}
+                           
+                        </div>
+                        <div id="pizza">
+                            {item.category=== "Dessert" ? <ProductCard product={item}/> : item}
+                           
+                        </div>
+                        <div id="pizza">
+                            {item.category=== "Drinks" ? <ProductCard product={item}/> : item}
+                           
+                        </div>
+                        <div id="pizza">
+                            {item.category=== "Other" ? <ProductCard product={item}/> : item}
+                           
+                        </div>
+                        
                     </Grid>
                 ))}
             </Grid>

@@ -56,12 +56,20 @@ code {
 }
 
 .navbar-menu{
+
   top: 0;
   left: 150px;
   position: sticky;
   background: #fff;
   padding: 5px 0;
   
+
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: -30px;
+  background: rgb(190, 188, 188);
+
 }
 
 .navbar-menu ul li{

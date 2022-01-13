@@ -1,9 +1,14 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';
+import * as React from "react";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { Link } from "react-router-dom";
 import BurgerIcon from '../images/pngegg (24).png'
+
+const options = ["Admin panel"];
+
+const ITEM_HEIGHT = 48;
 
 export default function BurgerMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -17,33 +22,38 @@ export default function BurgerMenu() {
 
   return (
     <div>
-      <Button
-        id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
+      <IconButton
+        aria-label="more"
+        id="long-button"
+        aria-controls={open ? "long-menu" : undefined}
+        aria-expanded={open ? "true" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
         <img width={40} src={BurgerIcon} alt="burgericon" />
-      </Button>
+      </IconButton>
       <Menu
-        id="basic-menu"
+        id="long-menu"
+        MenuListProps={{
+          "aria-labelledby": "long-button",
+        }}
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
+        PaperProps={{
+          style: {
+            maxHeight: ITEM_HEIGHT * 4.5,
+            width: "20ch",
+          },
         }}
       >
-        <MenuItem onClick={handleClose}>
-            <Link to="/admin">Admin Panel</Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-        <Link to="/add">Add</Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-        <Link to="#">О нас</Link>
-        </MenuItem>
+        <Link to="/admin">
+          <MenuItem onClick={handleClose}>Admin panel</MenuItem>
+        </Link>
+        <Link to="/add">
+          <MenuItem onClick={handleClose}>Add product</MenuItem>
+        </Link>
       </Menu>
     </div>
   );
