@@ -1,7 +1,7 @@
-import { Grid } from '@mui/material';
-import React, { useEffect } from 'react';
-import { AdminContext } from '../context/AdminProvider';
-import ProductCard from './ProductCard';
+import { Grid } from "@mui/material";
+import React, { useEffect } from "react";
+import { AdminContext } from "../context/AdminProvider";
+import ProductCard from "./ProductCard";
 
 const AllProducts = () => {
     const {getProducts, products} = React.useContext(AdminContext);
@@ -14,8 +14,8 @@ const AllProducts = () => {
       }
     return (
         <div>
-            <Grid container spacing={4}>
             <h3 className='categor-h3'>Пицца</h3>
+            <Grid container spacing={4}>
                 {products.map((item) => 
                      
                          item.category === "Pizza" && (
@@ -29,8 +29,8 @@ const AllProducts = () => {
                     
                )}
             </Grid>        
-            <Grid container spacing={4}>
                 <h3 className='categor-h3'>Комбо</h3>
+            <Grid container spacing={4}>
                 {products.map((item) => 
                 item.category=== "Snacks" &&
                     <Grid key={item.id} item xs={12} sm={6} md={4}>
@@ -40,8 +40,8 @@ const AllProducts = () => {
                     </Grid>
                     )}
             </Grid>
-                    <Grid container spacing={4}>
                         <h3 className='categor-h3'>Десерт</h3>
+                    <Grid container spacing={4}>
                     {products.map((item) => 
                     item.category=== "Dessert" &&
                     <Grid key={item.id} item xs={12} sm={6} md={4}>
@@ -51,8 +51,8 @@ const AllProducts = () => {
                     </Grid>
                     )}
             </Grid>
-                    <Grid container spacing={4}>
                         <h3 className='categor-h3'>Напитки</h3>
+                    <Grid container spacing={4}>
                     {products.map((item) => 
                     item.category=== "Drinks" &&
                    <Grid key={item.id} item xs={12} sm={6} md={4}>
@@ -62,8 +62,8 @@ const AllProducts = () => {
                     </Grid>
             )}
             </Grid>        
-            <Grid container spacing={4}>
                 <h3 className='categor-h3'>Другое</h3>
+            <Grid container spacing={4}>
                     {products.map((item) => 
                     item.category === "Other"  &&
                     <Grid key={item.id} item xs={12} sm={6} md={4}>
@@ -76,6 +76,6 @@ const AllProducts = () => {
             </Grid>
         </div>
     );
-};
+                    }
 
 export default AllProducts;
