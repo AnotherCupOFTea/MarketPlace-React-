@@ -1,14 +1,9 @@
 import * as React from 'react';
-import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-
-const options = [
-  "Admin panel"
-];
-
-const ITEM_HEIGHT = 48;
+import { Link } from 'react-router-dom';
+import BurgerIcon from '../images/pngegg (24).png'
 
 export default function BurgerMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -22,36 +17,33 @@ export default function BurgerMenu() {
 
   return (
     <div>
-      <IconButton
-        aria-label="more"
-        id="long-button"
-        aria-controls={open ? 'long-menu' : undefined}
-        aria-expanded={open ? 'true' : undefined}
+      <Button
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        <MoreVertIcon />
-      </IconButton>
+        <img width={40} src={BurgerIcon} alt="burgericon" />
+      </Button>
       <Menu
-        id="long-menu"
-        MenuListProps={{
-          'aria-labelledby': 'long-button',
-        }}
+        id="basic-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        PaperProps={{
-          style: {
-            maxHeight: ITEM_HEIGHT * 4.5,
-            width: '20ch',
-          },
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
         }}
       >
-        {options.map((option) => (
-          <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
-            {option}
-          </MenuItem>
-        ))}
+        <MenuItem onClick={handleClose}>
+            <Link to="/admin">Admin Panel</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+        <Link to="/add">Add</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+        <Link to="#">О нас</Link>
+        </MenuItem>
       </Menu>
     </div>
   );
