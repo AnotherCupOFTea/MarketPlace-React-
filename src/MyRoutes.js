@@ -6,7 +6,7 @@ import AddPage from "./pages/AddPage";
 import AdminPanel from "./pages/AdminPanel";
 import HomePage from "./pages/HomePage";
 import MyNavBar from "./components/MyNavBar";
-import ProductMenu from "./components/ProductMenu";
+
 import CartPage from "./pages/CartPage";
 
 const MyRoutes = () => {
@@ -15,7 +15,7 @@ const MyRoutes = () => {
       <AdminProvider>
         <BrowserRouter>
           <MyNavBar />
-          <ProductMenu/>
+         
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/add" element={<AddPage />} />
