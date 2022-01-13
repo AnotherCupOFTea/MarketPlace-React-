@@ -14,8 +14,8 @@ const AllProducts = () => {
       }
     return (
         <div>
+            <h3 className='categor-h3'>Пицца</h3>
             <Grid container spacing={4}>
-            <h3>Пицца</h3>
                 {products.map((item) => 
                      
                          item.category === "Pizza" && (
@@ -29,8 +29,8 @@ const AllProducts = () => {
                     
                )}
             </Grid>        
+                <h3 className='categor-h3'>Комбо</h3>
             <Grid container spacing={4}>
-                <h3>Комбо</h3>
                 {products.map((item) => 
                 item.category=== "Snacks" &&
                     <Grid key={item.id} item xs={12} sm={6} md={4}>
@@ -40,8 +40,8 @@ const AllProducts = () => {
                     </Grid>
                     )}
             </Grid>
+                        <h3 className='categor-h3'>Десерт</h3>
                     <Grid container spacing={4}>
-                        <h3>Десерт</h3>
                     {products.map((item) => 
                     item.category=== "Dessert" &&
                     <Grid key={item.id} item xs={12} sm={6} md={4}>
@@ -51,8 +51,8 @@ const AllProducts = () => {
                     </Grid>
                     )}
             </Grid>
+                        <h3 className='categor-h3'>Напитки</h3>
                     <Grid container spacing={4}>
-                        <h3>Напитки</h3>
                     {products.map((item) => 
                     item.category=== "Drinks" &&
                    <Grid key={item.id} item xs={12} sm={6} md={4}>
@@ -62,8 +62,8 @@ const AllProducts = () => {
                     </Grid>
             )}
             </Grid>        
+                <h3 className='categor-h3'>Другое</h3>
             <Grid container spacing={4}>
-                <h3>Другое</h3>
                     {products.map((item) => 
                     item.category === "Other"  &&
                     <Grid key={item.id} item xs={12} sm={6} md={4}>
@@ -76,60 +76,6 @@ const AllProducts = () => {
             </Grid>
         </div>
     );
-=======
-  const { getProducts, products } = React.useContext(AdminContext);
-  useEffect(() => {
-    getProducts();
-  }, []);
-  // console.log(products)
-  if (!products) {
-    return <h2>Loading...</h2>;
-  }
-  return (
-    <div>
-      <Grid container spacing={4}>
-        {products.map((item) => (
-          <Grid key={item.id} item xs={12} sm={6} md={4}>
-            <div id="pizza">
-              {item.category === "Pizza" ? (
-                <ProductCard product={item} />
-              ) : (
-                item
-              )}
-            </div>
-            <div id="pizza">
-              {item.category === "Snacks" ? (
-                <ProductCard product={item} />
-              ) : (
-                item
-              )}
-            </div>
-            <div id="pizza">
-              {item.category === "Dessert" ? (
-                <ProductCard product={item} />
-              ) : (
-                item
-              )}
-            </div>
-            <div id="pizza">
-              {item.category === "Drinks" ? (
-                <ProductCard product={item} />
-              ) : (
-                item
-              )}
-            </div>
-            <div id="pizza">
-              {item.category === "Other" ? (
-                <ProductCard product={item} />
-              ) : (
-                item
-              )}
-            </div>
-          </Grid>
-        ))}
-      </Grid>
-    </div>
-  );
-};
+                    }
 
 export default AllProducts;

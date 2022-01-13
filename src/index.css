@@ -66,7 +66,7 @@ code {
 
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  
   margin-left: -30px;
   background: rgb(190, 188, 188);
 
@@ -145,4 +145,62 @@ a {
 
 .cart{
   margin: 0 20px;
+}
+
+.categor-h3{
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Header */
+
+.header-img{
+  padding-top: 40px;
+  
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content{
+  width: 50%;
+}
+
+.header-btns{
+  display: flex;
+  margin-top: 30px;
+}
+
+.zakaz-btn{
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  background: rgb(17, 68, 0);
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.5s all ease;
+}
+
+.zakaz-btn:hover{
+  background: transparent;
+  color: #000;
+  border: 1px solid rgb(17, 68, 0) ;
+}
+
+.call-btn{
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  background: rgb(0, 123, 255);
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.5s all ease;
+  margin-left: 30px;
+}
+
+.call-btn:hover{
+  background: transparent;
+  color: rgb(0, 10, 89);
+  border: 1px solid rgb(0, 22, 68) ;
 }
