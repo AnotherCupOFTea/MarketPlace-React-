@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -56,7 +58,7 @@ code {
 }
 
 .navbar-menu{
-
+  z-index: 1000;
   top: 0;
   left: 150px;
   position: sticky;
@@ -145,4 +147,32 @@ a {
 
 .cart{
   margin: 0 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  border: 1px solid rgb(134, 131, 131);
+  padding: 5px;
+}
+
+.card img {
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.card img:hover {
+  padding: 2px;
+  transition: 0.3s;
+}
+
+.card p {
+  
+}
+
+.categor-h3 {
+  display: block;
 }
