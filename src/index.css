@@ -11,7 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+ 
 
 
 /* Navbar */
@@ -21,6 +21,7 @@ code {
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
+ 
 }
 
 .navbar-left{
@@ -55,17 +56,26 @@ code {
 }
 
 .navbar-menu{
+
+  top: 0;
+  left: 150px;
+  position: sticky;
+  background: #fff;
+  padding: 5px 0;
+  
+
   display: flex;
   justify-content: center;
   margin-top: 10px;
   margin-left: -30px;
   background: rgb(190, 188, 188);
+
 }
 
 .navbar-menu ul li{
   text-decoration: transparent;
   list-style-type: none;
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .navbar-menu ul li a{
@@ -106,3 +116,33 @@ a {
   color:  inherit;
 }
 
+.box{
+  width: 200px;
+  height: 100px;
+  background: #000;
+  margin-top: 10px;
+}
+
+.top-icon{
+  width: 80px;
+  transform: rotate(270deg);
+  cursor:pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 100px;
+  border-radius: 50px;
+  transition: 0.5s all ease;
+}
+
+.top-icon:hover{
+  box-shadow:  1px 1px 20px 1px rgb(250, 179, 0);
+}
+
+.user-img{
+  border-radius: 50px;
+  
+}
+
+.cart{
+  margin: 0 20px;
+}
