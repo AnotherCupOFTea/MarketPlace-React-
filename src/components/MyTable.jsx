@@ -10,6 +10,7 @@ import { AdminContext } from "../context/AdminProvider";
 import { Button } from "@mui/material";
 import BinIcon from "../images/bin.png";
 import EditIcon from "../images/editing.png";
+import MyEditRow from "./MyEditRow";
 
 export default function BasicTable() {
   const { getProducts, deleteProduct, products } =
@@ -18,6 +19,8 @@ export default function BasicTable() {
   React.useEffect(() => {
     getProducts();
   }, []);
+
+  const [editProduct, setEditProduct] = React.useState(null);
 
   if (!products) {
     return <h2>Loading...</h2>;
@@ -39,30 +42,38 @@ export default function BasicTable() {
         </TableHead>
         <TableBody>
           {products.map((item) => (
-            <TableRow
-              key={item.id}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                <img width="170" src={item.image} alt="productImage" />
-              </TableCell>
-              <TableCell align="center">{item.name}</TableCell>
-              <TableCell align="center">{item.category}</TableCell>
-              <TableCell align="center">{item.description}</TableCell>
-              <TableCell align="center">
-                <strong>{item.price}</strong>
-              </TableCell>
-              <TableCell align="center">
-                <Button onClick={() => deleteProduct(item.id)}>
-                  <img src={BinIcon} alt="bin" />
-                </Button>
-              </TableCell>
-              <TableCell align="center">
-                <Button>
-                  <img src={EditIcon} alt="edit" />
-                </Button>
-              </TableCell>
-            </TableRow>
+            <React.Fragment key={item.id}>
+              {editProduct?.id === item.id ? (
+                <MyEditRow
+                  editProduct={editProduct}
+                  setEditProduct={setEditProduct}
+                />
+              ) : (
+                <TableRow
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    <img width="170" src={item.image} alt="productImage" />
+                  </TableCell>
+                  <TableCell align="center">{item.name}</TableCell>
+                  <TableCell align="center">{item.category}</TableCell>
+                  <TableCell align="center">{item.description}</TableCell>
+                  <TableCell align="center">
+                    <strong>{item.price}</strong>
+                  </TableCell>
+                  <TableCell align="center">
+                    <Button onClick={() => deleteProduct(item.id)}>
+                      <img src={BinIcon} alt="bin" />
+                    </Button>
+                  </TableCell>
+                  <TableCell align="center">
+                    <Button onClick={() => setEditProduct(item)}>
+                      <img src={EditIcon} alt="edit" />
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              )}
+            </React.Fragment>
           ))}
         </TableBody>
       </Table>
