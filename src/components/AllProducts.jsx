@@ -15,7 +15,7 @@ const AllProducts = () => {
     return (
         <div>
             <Grid container spacing={4}>
-            <h3>Пицца</h3>
+            <h3 className='categor-h3'>Пицца</h3>
                 {products.map((item) => 
                      
                          item.category === "Pizza" && (
@@ -30,7 +30,7 @@ const AllProducts = () => {
                )}
             </Grid>        
             <Grid container spacing={4}>
-                <h3>Комбо</h3>
+                <h3 className='categor-h3'>Комбо</h3>
                 {products.map((item) => 
                 item.category=== "Snacks" &&
                     <Grid key={item.id} item xs={12} sm={6} md={4}>
@@ -41,7 +41,7 @@ const AllProducts = () => {
                     )}
             </Grid>
                     <Grid container spacing={4}>
-                        <h3>Десерт</h3>
+                        <h3 className='categor-h3'>Десерт</h3>
                     {products.map((item) => 
                     item.category=== "Dessert" &&
                     <Grid key={item.id} item xs={12} sm={6} md={4}>
@@ -52,7 +52,7 @@ const AllProducts = () => {
                     )}
             </Grid>
                     <Grid container spacing={4}>
-                        <h3>Напитки</h3>
+                        <h3 className='categor-h3'>Напитки</h3>
                     {products.map((item) => 
                     item.category=== "Drinks" &&
                    <Grid key={item.id} item xs={12} sm={6} md={4}>
@@ -63,7 +63,7 @@ const AllProducts = () => {
             )}
             </Grid>        
             <Grid container spacing={4}>
-                <h3>Другое</h3>
+                <h3 className='categor-h3'>Другое</h3>
                     {products.map((item) => 
                     item.category === "Other"  &&
                     <Grid key={item.id} item xs={12} sm={6} md={4}>
