@@ -1,14 +1,18 @@
-import { Menu } from "@mui/material";
+
+import { Container } from "@mui/material";
 import React from "react";
+import AllProducts from "../components/AllProducts";
 import HomeMenu from "../components/HomeMenu";
-import MyLoader from "../components/MyLoader";
+
 
 const HomePage = () => {
-  return (
-    <div>
-      <HomeMenu />
-    </div>
-  );
-};
+  return <div>
+        <HomeMenu />
+       <Container>
+           <AllProducts/>
+       </Container>
+                    
+  </div>
+}
 
 export default HomePage;

@@ -4,6 +4,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Link } from "react-router-dom";
+import BurgerIcon from '../images/pngegg (24).png'
 
 const options = ["Admin panel"];
 
@@ -27,9 +28,10 @@ export default function BurgerMenu() {
         aria-controls={open ? "long-menu" : undefined}
         aria-expanded={open ? "true" : undefined}
         aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        <MoreVertIcon />
+        <img width={40} src={BurgerIcon} alt="burgericon" />
       </IconButton>
       <Menu
         id="long-menu"
