@@ -5,19 +5,19 @@ const HomeMenu = () => {
     <div className="navbar-menu">
       <ul>
         <li>
-          <a href="#">Пицца</a>
+          <a href="#pizza">Пицца</a>
         </li>
         <li>
-          <a href="#">Комбо</a>
+          <a href="#snacks">Закуски</a>
         </li>
         <li>
-          <a href="#">Закуски</a>
+          <a href="#dessert">Десерты</a>
         </li>
         <li>
-          <a href="#">Десерты</a>
+          <a href="#drinks">Напитки </a>
         </li>
         <li>
-          <a href="#">Напитки </a>
+          <a href="#other">Другие</a>
         </li>
       </ul>
     </div>

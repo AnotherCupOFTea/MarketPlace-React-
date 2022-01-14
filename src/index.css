@@ -23,7 +23,8 @@ code {
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
- 
+  
+  
 }
 
 .navbar-left{
@@ -70,7 +71,7 @@ code {
   justify-content: center;
   margin-top: 10px;
   margin-left: -30px;
-  background: rgb(190, 188, 188);
+  box-shadow: 1px  10px 10px rgba(0, 0, 0, 0.089);
 
 }
 
@@ -147,7 +148,12 @@ a {
 
 .cart{
   margin: 0 20px;
+  padding-right: 5px;
 }
+.cart:hover{
+  border-bottom: 2px solid rgba(123, 121, 121, 0.611);
+}
+
 
 .buttons {
   display: flex;
@@ -156,7 +162,7 @@ a {
 
 .card {
   border: 1px solid rgb(134, 131, 131);
-  padding: 5px;
+  padding: 10px;
 }
 
 .card img {
@@ -169,4 +175,77 @@ a {
   transition: 0.3s;
 }
 
+<<<<<<< HEAD
+.product-name{
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  height: 32px;
+}
 
+.categor-h3 {
+  display: block;
+}
+.categor-h3{
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Header */
+
+.header-img{
+  padding-top: 40px;
+  
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content{
+  width: 50%;
+}
+
+.header-btns{
+  display: flex;
+  margin-top: 30px;
+}
+
+.zakaz-btn{
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  background: rgb(17, 68, 0);
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.5s all ease;
+}
+
+.zakaz-btn:hover{
+  background: transparent;
+  color: #000;
+  border: 1px solid rgb(17, 68, 0) ;
+}
+
+.call-btn{
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  background: rgb(0, 123, 255);
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.5s all ease;
+  margin-left: 30px;
+}
+
+.call-btn:hover{
+  background: transparent;
+  color: rgb(0, 10, 89);
+  border: 1px solid rgb(0, 22, 68) ;
+
+}
+=======
+
+>>>>>>> 40dacd1e9ee10e8171c11ccdc872bf8f62e4978d
