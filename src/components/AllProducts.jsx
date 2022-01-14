@@ -13,65 +13,65 @@ const AllProducts = () => {
   }
   return (
     <div>
-      <h3 className="categor-h3">Пицца</h3>
+      <h3 className="categor-h3" id="pizza">Пицца</h3>
       <Grid container spacing={4}>
         {products.map(
           (item) =>
             item.category === "Pizza" && (
               <Grid key={item.id} item xs={12} sm={6} md={3}>
-                <div id="pizza">
+                <div >
                   <ProductCard product={item} />
                 </div>
               </Grid>
             )
         )}
       </Grid>
-      <h3 className="categor-h3">Закуски</h3>
+      <h3 className="categor-h3" id="snacks">Закуски</h3>
       <Grid container spacing={4}>
         {products.map(
           (item) =>
             item.category === "Snacks" && (
               <Grid key={item.id} item xs={12} sm={6} md={3}>
-                <div id="snacks">
+                <div >
                   <ProductCard product={item} />
                 </div>
               </Grid>
             )
         )}
       </Grid>
-      <h3 className="categor-h3">Десерт</h3>
+      <h3 className="categor-h3" id="dessert">Десерт</h3>
       <Grid container spacing={4}>
         {products.map(
           (item) =>
             item.category === "Dessert" && (
               <Grid key={item.id} item xs={12} sm={6} md={3}>
-                <div id="dessert">
+                <div >
                   <ProductCard product={item} />
                 </div>
               </Grid>
             )
         )}
       </Grid>
-      <h3 className="categor-h3">Напитки</h3>
+      <h3 className="categor-h3" id="drinks">Напитки</h3>
       <Grid container spacing={4}>
         {products.map(
           (item) =>
             item.category === "Drinks" && (
               <Grid key={item.id} item xs={12} sm={6} md={3}>
-                <div id="drinks">
+                <div >
                   <ProductCard product={item} />
                 </div>
               </Grid>
             )
         )}
       </Grid>
-      <h3 className="categor-h3">Другое</h3>
+      <h3 className="categor-h3" id="other">Другое</h3>
       <Grid container spacing={4}>
         {products.map(
           (item) =>
             item.category === "Other" && (
               <Grid key={item.id} item xs={12} sm={6} md={3}>
-                <div id="other">
+                <div >
                   <ProductCard product={item} />
                 </div>
               </Grid>
