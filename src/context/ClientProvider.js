@@ -18,6 +18,8 @@ const reducer = (state, action) => {
       return { ...state, products: action.payload };
     case "ADD_AND_DELETE_PRODUCT_IN_CART":
       return { ...state, productsCount: action.payload };
+    case "GET_CART":
+      return { ...state, cart: action.payload };
     default:
       return state;
   }
@@ -103,14 +105,66 @@ const ClientProvider = (props) => {
     }
   };
 
+  const getCart = async () => {
+    let cart = JSON.parse(sessionStorage.getItem("cart"));
+
+    if (!cart) {
+      cart = {
+        products: [],
+        totalPrice: 0,
+      };
+    }
+
+    let action = {
+      type: "GET_CART",
+      payload: cart,
+    };
+    dispatch(action);
+  };
+
+  const changeCountCartProduct = (value, id) => {
+    let cart = JSON.parse(sessionStorage.getItem("cart"));
+    cart.products = cart.products.map((item) => {
+      if (item.product.id === id) {
+        item.count = value;
+        item.subPrice = calcSubPrice(item);
+      }
+      return item;
+    });
+    cart.totalPrice = calcTotalPrice(cart.products);
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+    getCart();
+  };
+
+  const deleteProductInCart = (id) => {
+    let cart = JSON.parse(sessionStorage.getItem("cart"));
+    cart.products = cart.products.filter((item) => {
+      return item.products.id !== id;
+    });
+    cart.totalPrice = calcTotalPrice(cart.products);
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+    getCart();
+
+    let action = {
+      type: "ADD_AND_DELETE_PRODUCT_IN_CART",
+      payload: cart.products.length,
+    };
+
+    dispatch(action);
+  };
+
   return (
     <ClientContext.Provider
       value={{
         getClientProducts,
         addAndDeleteProductInCard,
         checkProductInCart,
+        getCart,
+        changeCountCartProduct,
+        deleteProductInCart,
         products: state.products,
         productsCount: state.productsCount,
+        cart: state.cart,
       }}
     >
       {props.children}
