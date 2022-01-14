@@ -12,8 +12,9 @@ const ProductCard = ({ product }) => {
   return (
     <div>
       <div className="card">
-        <p>{product.name}</p>
+        
         <img width="100%" src={product.image} alt="photo" />
+        <p className="product-name">{product.name}</p>
         <div className="buttons">
           {checkProductInCart(product.id) ? (
             <Button
