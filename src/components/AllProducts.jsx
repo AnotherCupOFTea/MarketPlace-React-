@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { useEffect } from "react";
-import { AdminContext } from "../context/AdminProvider";
+// import { AdminContext } from "../context/AdminProvider";
 import { ClientContext } from "../context/ClientProvider";
 import ProductCard from "./ProductCard";
 
@@ -15,6 +15,9 @@ const AllProducts = () => {
   }
   return (
     <div>
+       <div className="text-menu">
+         <p>Меню</p>
+       </div>
       <h3 className="categor-h3" id="pizza">Пицца</h3>
       <Grid container spacing={4}>
         {products.map(

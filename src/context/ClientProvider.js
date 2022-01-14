@@ -6,10 +6,12 @@ import { calcSubPrice, calcTotalPrice } from "../helpers/calcPrice";
 export const ClientContext = React.createContext();
 
 let cart = JSON.parse(sessionStorage.getItem("cart"));
+// let like = JSON.parse(localStorage.getItem("like"));
 
 const Init_State = {
   products: null,
   productsCount: cart ? cart.products.length : 0,
+  // likes: null,
 };
 
 const reducer = (state, action) => {
@@ -18,6 +20,8 @@ const reducer = (state, action) => {
       return { ...state, products: action.payload };
     case "ADD_AND_DELETE_PRODUCT_IN_CART":
       return { ...state, productsCount: action.payload };
+    // case "ADD_AND_DELETE_PRODUCT_IN_LIKE":
+    //     return { ...state, productsCount: action.payload };  
     default:
       return state;
   }
@@ -103,13 +107,56 @@ const ClientProvider = (props) => {
     }
   };
 
+  // const addAndDeleteProductInLike = (product) => {
+  //   let like = JSON.parse(localStorage.getItem("like"));
+
+  //   if (!like) {
+  //     like = {
+  //       likes: [],
+        
+  //     };
+  //   }
+
+  //   let likeProduct = {
+  //     product: product,
+      
+  //   };
+
+    
+
+  //   let check = like.likes.find((item) => {
+  //     return item.product.id === product.id;
+  //   });
+
+  //   // console.log(check);
+
+  //   if (!check) {
+  //     like.likes.push(likeProduct);
+  //   } else {
+  //     like.likes = like.likes.filter((item) => {
+  //       return item.product.id !== product.id;
+  //     });
+  //   }
+
+  //   localStorage.setItem("like", JSON.stringify(like));
+
+  //   let action = {
+  //     type: "ADD_AND_DELETE_PRODUCT_IN_LIKE",
+  //     payload: like.likes.length,
+  //   };
+
+  //   dispatch(action);
+  // };
+
   return (
     <ClientContext.Provider
       value={{
         getClientProducts,
         addAndDeleteProductInCard,
+        // addAndDeleteProductInLike,
         checkProductInCart,
         products: state.products,
+        // likes: state.likes,
         productsCount: state.productsCount,
       }}
     >
