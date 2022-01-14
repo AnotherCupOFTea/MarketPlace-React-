@@ -39,6 +39,14 @@
       "price": 140,
       "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/c7438015dcc24d599daa02db7ff79be6_292x292.jpeg",
       "id": 8
+    },
+    {
+      "name": "Spicy Dodster",
+      "description": "Горячая закуска с цыпленком, перцем халапеньо, солеными огурчиками, томатами, моцареллой и соусом барбекю в тонкой пшеничной лепешке",
+      "category": "Snacks",
+      "price": 130,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/29d4bf3571804872acaa97d496c09e48_1875x1875.jpeg",
+      "id": 9
     }
   ]
 }
