@@ -1,12 +1,14 @@
 import { Grid } from "@mui/material";
 import React, { useEffect } from "react";
 import { AdminContext } from "../context/AdminProvider";
+import { ClientContext } from "../context/ClientProvider";
 import ProductCard from "./ProductCard";
 
 const AllProducts = () => {
-  const { getProducts, products } = React.useContext(AdminContext);
+  // const { getProducts, products } = React.useContext(AdminContext);
+  const { getClientProducts, products } = React.useContext(ClientContext);
   useEffect(() => {
-    getProducts();
+    getClientProducts();
   }, []);
   if (!products) {
     return <h2>Loading...</h2>;
