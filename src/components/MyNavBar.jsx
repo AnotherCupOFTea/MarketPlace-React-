@@ -1,5 +1,5 @@
 import React from "react";
-import { CssBaseline, Container, Button } from "@mui/material";
+import { CssBaseline, Container, Button, Badge } from "@mui/material";
 // import { Dropdown} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
@@ -8,9 +8,12 @@ import LogOutIcon from "../images/pngegg (21).png";
 import CartIcon from "../images/pngegg (10).png";
 import BurgerMenu from "./BurgerMenu";
 import { AuthContext } from "../context/AuthProvider";
+import { ClientContext } from "../context/ClientProvider";
 
 const MyNavBar = () => {
   const { AuthWithGoogle, user, logout } = React.useContext(AuthContext);
+  const { productsCount } = React.useContext(ClientContext);
+
   return (
     <div>
       <React.Fragment>
@@ -51,7 +54,9 @@ const MyNavBar = () => {
               )}
               <Link to="/cart">
                 <div className="cart">
-                  <img width={40} src={CartIcon} alt="" />
+                  <Badge badgeContent={productsCount} color="error">
+                    <img width={40} src={CartIcon} alt="" />
+                  </Badge>
                 </div>
               </Link>
               <div className="burger-menu">

@@ -6,23 +6,25 @@ import AddPage from "./pages/AddPage";
 import AdminPanel from "./pages/AdminPanel";
 import HomePage from "./pages/HomePage";
 import MyNavBar from "./components/MyNavBar";
-
 import CartPage from "./pages/CartPage";
+import ClientProvider, { ClientContext } from "./context/ClientProvider";
 
 const MyRoutes = () => {
   return (
-      <AuthProvider>
+    <AuthProvider>
       <AdminProvider>
-        <BrowserRouter>
-          <MyNavBar />
-         
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/add" element={<AddPage />} />
-            <Route path="/admin" element={<AdminPanel />} />
-            <Route path="/cart" element={<CartPage />} />
-          </Routes>
-        </BrowserRouter>
+        <ClientProvider>
+          <BrowserRouter>
+            <MyNavBar />
+
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/add" element={<AddPage />} />
+              <Route path="/admin" element={<AdminPanel />} />
+              <Route path="/cart" element={<CartPage />} />
+            </Routes>
+          </BrowserRouter>
+        </ClientProvider>
       </AdminProvider>
     </AuthProvider>
   );
