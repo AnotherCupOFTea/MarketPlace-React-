@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { ClientContext } from "../context/ClientProvider";
-import { Button } from "@mui/material";
+import { Button, TableFooter } from "@mui/material";
 import DeleteIcon from "../images/bin.png";
 
 export default function BasicTable({ cart }) {
@@ -50,7 +50,7 @@ export default function BasicTable({ cart }) {
                   min="1"
                 />
               </TableCell>
-              <TableCell align="center">{row.subPrice}</TableCell>
+              <TableCell align="center">{row.subPrice} сом</TableCell>
               <TableCell align="center">
                 <Button onClick={() => deleteProductInCart(row.product.id)}>
                   <img src={DeleteIcon} alt="bin" />
@@ -59,6 +59,12 @@ export default function BasicTable({ cart }) {
             </TableRow>
           ))}
         </TableBody>
+        <TableFooter>
+          <TableRow>
+            <TableCell align="left">Total Price:</TableCell>
+            <TableCell align="right">{cart.totalPrice} сом</TableCell>
+          </TableRow>
+        </TableFooter>
       </Table>
     </TableContainer>
   );

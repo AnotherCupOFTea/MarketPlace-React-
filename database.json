@@ -47,6 +47,86 @@
       "price": 130,
       "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/29d4bf3571804872acaa97d496c09e48_1875x1875.jpeg",
       "id": 9
+    },
+    {
+      "name": "Double Chicken",
+      "description": "Цыпленок, моцарелла, альфредо соус",
+      "category": "Pizza",
+      "price": 389,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/f351d4358f134c31b5bed9093faf38e3_292x292.jpeg",
+      "id": 10
+    },
+    {
+      "name": "Ham and Mushroom",
+      "description": "Ветчина из цыпленка, шампиньоны, моцарелла, томатный соус",
+      "category": "Pizza",
+      "price": 295,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/ecbccdfb36654d43af86e59f978e4cf0_292x292.jpeg",
+      "id": 11
+    },
+    {
+      "name": "Pepperoni",
+      "description": "Пепперони из цыпленка, моцарелла, томатный соус",
+      "category": "Pizza",
+      "price": 400,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/da50ee10-6241-406c-8bca-c31f364723a1.jpg",
+      "id": 12
+    },
+    {
+      "name": "Cheeseburger Pizz",
+      "description": "Мясной соус болоньезе, моцарелла, красный лук, соленые огурчики, томаты, соус бургер",
+      "category": "Pizza",
+      "price": 365,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/720df21a-b849-403b-bf6e-9c2c6279da09.jpg",
+      "id": 13
+    },
+    {
+      "name": "Cheese Chicken",
+      "description": "Цыпленок, сырный соус, моцарелла, томаты, соус альфредо, смесь сыров чеддер и пармезан, чеснок сухой",
+      "category": "Pizza",
+      "price": 400,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/e37b80d51d4744789449a7c51f1e62d8_292x292.jpeg",
+      "id": 14
+    },
+    {
+      "name": "Dodo Mix",
+      "description": "Моцарелла, ветчина из цыпленка, цыпленок, сыр блю чиз, сыры чеддер и пармезан, соус песто, кубики брынзы, красный лук, соус альфредо, чеснок, итальянские травы, томаты",
+      "category": "Pizza",
+      "price": 500,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/25443cce529c4956b7fdb0f248186770_292x292.jpeg",
+      "id": 15
+    },
+    {
+      "name": "Arriba!",
+      "description": "Соус бургер, цыпленок, соус ранч, чоризо из цыпленка, сладкий перец, красный лук, моцарелла, томаты, чеснок",
+      "category": "Pizza",
+      "price": 395,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/87646467b29f44f689127715b8253adf_292x292.jpeg",
+      "id": 16
+    },
+    {
+      "name": "Pesto",
+      "description": "Соус песто, соус альфредо, цыплёнок, кубики брынзы, моцарелла, томаты",
+      "category": "Pizza",
+      "price": 365,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/f725038ce3314a0ba0e9ff09129f6c61_292x292.jpeg",
+      "id": 17
+    },
+    {
+      "name": "Mushroom Starter",
+      "description": "Горячая закуска с шампиньонами, моцареллой и соусом ранч в тонкой пшеничной лепешке",
+      "category": "Snacks",
+      "price": 135,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/2eb7be57cf35400b80ccddcd48d2a374_292x292.jpeg",
+      "id": 18
+    },
+    {
+      "name": "Spicy Starter",
+      "description": "Горячая закуска с острыми колбасками чоризо, острым цыпленком, перцем халапеньо, моцареллой и соусом сальса в тонкой пшеничной лепешке",
+      "category": "Snacks",
+      "price": 135,
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/8236fffec89f4bc78b0e7af8ea8432e3_292x292.jpeg",
+      "id": 19
     }
   ]
 }

@@ -33,11 +33,7 @@ const MyAddForm = () => {
       }
     }
 
-    console.log("s");
-
     addProduct(newProduct);
-
-    console.log("d");
 
     setNewProduct({
       name: "",

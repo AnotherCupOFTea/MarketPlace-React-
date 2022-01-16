@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { ClientContext } from "../context/ClientProvider";
 import CartTable from "../components/CartTable";
 import { Container } from "@mui/material";
-import TotalPrice from "../components/TotalPrice";
 
 const CartPage = () => {
   const { getCart, cart } = React.useContext(ClientContext);
@@ -23,9 +22,6 @@ const CartPage = () => {
     <div className="cart-menu">
       <Container maxWidth="md">
         <CartTable cart={cart} />
-      </Container>
-      <Container maxWidth="xs">
-        <TotalPrice />
       </Container>
     </div>
   );
