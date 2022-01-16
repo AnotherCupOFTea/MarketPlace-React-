@@ -54,6 +54,9 @@ export default function BurgerMenu() {
         <Link to="/add">
           <MenuItem onClick={handleClose}>Add product</MenuItem>
         </Link>
+        <Link to="/like">
+          <MenuItem onClick={handleClose}>Favorite</MenuItem>
+        </Link>
       </Menu>
     </div>
   );
