@@ -245,3 +245,8 @@ a {
   border: 1px solid rgb(0, 22, 68) ;
 
 }
+
+.cart-menu {
+  display: flex;
+  justify-content: space-between;
+}

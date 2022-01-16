@@ -139,7 +139,7 @@ const ClientProvider = (props) => {
   const deleteProductInCart = (id) => {
     let cart = JSON.parse(sessionStorage.getItem("cart"));
     cart.products = cart.products.filter((item) => {
-      return item.products.id !== id;
+      return item.product.id !== id;
     });
     cart.totalPrice = calcTotalPrice(cart.products);
     sessionStorage.setItem("cart", JSON.stringify(cart));
