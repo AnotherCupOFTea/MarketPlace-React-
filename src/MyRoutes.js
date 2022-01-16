@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import MyNavBar from "./components/MyNavBar";
 import CartPage from "./pages/CartPage";
 import ClientProvider, { ClientContext } from "./context/ClientProvider";
+import LikePage from "./pages/LikePage";
 
 const MyRoutes = () => {
   return (
@@ -22,6 +23,8 @@ const MyRoutes = () => {
               <Route path="/add" element={<AddPage />} />
               <Route path="/admin" element={<AdminPanel />} />
               <Route path="/cart" element={<CartPage />} />
+              <Route path="/like" element={<LikePage />} />
+
             </Routes>
           </BrowserRouter>
         </ClientProvider>

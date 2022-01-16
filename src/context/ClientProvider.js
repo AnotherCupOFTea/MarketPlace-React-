@@ -10,6 +10,7 @@ let cart = JSON.parse(sessionStorage.getItem("cart"));
 const Init_State = {
   products: null,
   productsCount: cart ? cart.products.length : 0,
+  likeProducts: null
 };
 
 const reducer = (state, action) => {
@@ -17,7 +18,8 @@ const reducer = (state, action) => {
     case "GET_CLIENT_PRODUCTS":
       return { ...state, products: action.payload };
     case "ADD_AND_DELETE_PRODUCT_IN_CART":
-      return { ...state, productsCount: action.payload };
+      return { ...state, productsCount: action.payload }; 
+    
     case "GET_CART":
       return { ...state, cart: action.payload };
     default:
@@ -253,6 +255,34 @@ const ClientProvider = (props) => {
     indexOfLastOtherPost
   );
 
+  // favorite
+  const addAndDeleteProductInLike = (likeproduct) => {
+    let likecart = JSON.parse(localStorage.getItem("like"));
+
+    let likecartProduct = {
+      likeproduct: likeproduct,
+    };
+
+    likecartProduct.subPrice = calcSubPrice(likecartProduct);
+
+    let check = likecart.likeProducts.find((item) => {
+      return item.product.id === likeproduct.id;
+    });
+
+    console.log(check);
+
+    if (!check) {
+      likecart.likeProducts.push(likecartProduct);
+    } else {
+      likecart.LikeProducts = cart.LikeProducts.filter((item) => {
+        return item.product.id !== likeproduct.id;
+      });
+    }
+
+    localStorage.setItem("like", JSON.stringify(likecart));
+
+  };
+
   return (
     <ClientContext.Provider
       value={{
@@ -262,6 +292,7 @@ const ClientProvider = (props) => {
         getCart,
         changeCountCartProduct,
         deleteProductInCart,
+<<<<<<< HEAD
         setCurrentPage,
         setCurrentPizzaPage,
         setCurrentSnacksPage,
@@ -296,6 +327,13 @@ const ClientProvider = (props) => {
         totalOtherProductsCount,
         currentOtherPosts,
         currentOtherPage,
+=======
+        addAndDeleteProductInLike,
+        products: state.products,
+        productsCount: state.productsCount,
+        cart: state.cart,
+        likeProducts:state.likeProducts,
+>>>>>>> 2d36318379822d64be7d1095567eb28ab9040f6c
       }}
     >
       {props.children}

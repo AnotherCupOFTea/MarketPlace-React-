@@ -9,6 +9,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+*{
+  font-family: 'Lato', sans-serif;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -160,20 +164,8 @@ a {
   justify-content: space-around;
 }
 
-.card {
-  border: 1px solid rgb(134, 131, 131);
-  padding: 10px;
-}
 
-.card img {
-  margin-left: 5px;
-  transition: 0.3s;
-}
 
-.card img:hover {
-  padding: 2px;
-  transition: 0.3s;
-}
 
 .product-name{
   font-size: 18px;
@@ -246,7 +238,103 @@ a {
 
 }
 
+<<<<<<< HEAD
 .cart-menu {
   display: flex;
   justify-content: space-between;
 }
+=======
+/* Card */
+
+.card {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.426);
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s all ease;
+  
+}
+
+.card:hover{
+  box-shadow: 1px 1px 10px rgba(252, 202, 0, 0.426);
+}
+
+.card-img {
+  margin-left: 5px;
+  transition: 0.3s;
+  padding: 0;
+  
+}
+
+.card-img:hover {
+  padding: 2px;
+  transition: 0.3s;
+}
+
+.product-name{
+  margin: 0;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.213);
+  margin-bottom: 5px;
+}
+
+
+.card-text{
+  padding: 0 10px;
+  font-size: 14px;
+  margin: 0;
+  height: 40px;
+  overflow: hidden;
+}
+
+.card-like{
+   border: transparent;
+   width: 40%;
+   background: transparent;
+   cursor: pointer;
+   margin: 0 auto;
+  display: block;
+  transition: 0.5s all ease;
+  border-bottom: 2px solid transparent;
+}
+
+.card-like:hover{
+  border-bottom: 2px solid #000;
+}
+
+.card-cart{
+  width: 40%;
+  border: transparent;
+  background: transparent;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  transition: 0.5s all ease;
+  border-bottom: 2px solid transparent;
+}
+
+.card-cart:hover{
+  border-bottom: 2px solid #000;
+}
+
+.card-buttons{
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.card-price{
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.text-menu p{
+  font-size: 36px;
+  text-align: center;
+}
+
+.text-menu{
+  background: rgb(182, 182, 182);
+}
+>>>>>>> 2d36318379822d64be7d1095567eb28ab9040f6c

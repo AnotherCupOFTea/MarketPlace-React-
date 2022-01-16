@@ -1,43 +1,57 @@
-import { Button } from "@mui/material";
+// import { Button } from "@mui/material";
 import React from "react";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import AddToCartIcon from '../images/add-to-cart.png'
+import TickCartIcon from '../images/cart-tick.png'
+import LikeIcon from '../images/heart.png'
+import NotLike from '../images/heart (1).png'
 import { ClientContext } from "../context/ClientProvider";
 
 const ProductCard = ({ product }) => {
-  const { addAndDeleteProductInCard, checkProductInCart } =
+  const { addAndDeleteProductInCard,addAndDeleteProductInLike, checkProductInCart } =
     React.useContext(ClientContext);
 
   return (
     <div>
       <div className="card">
         
-        <img width="100%" src={product.image} alt="photo" />
-        <p className="product-name">{product.name}</p>
-        <div className="buttons">
+        <img width="100%" src={product.image} alt="photo" className="card-img" />
+        <div className="card-buttons">
           {checkProductInCart(product.id) ? (
-            <Button
-              variant="outlined"
+            <button className="card-cart"
+              
               onClick={() => addAndDeleteProductInCard(product)}
             >
-              <RemoveShoppingCartIcon
-                sx={{ fontSize: "40px", color: "black" }}
-              />
-            </Button>
+              <img width={40} src={TickCartIcon} alt="CartIcon" />
+            </button>
           ) : (
-            <Button
-              variant="outlined"
+            <button className="card-cart"
+              
               onClick={() => addAndDeleteProductInCard(product)}
             >
-              <ShoppingCartIcon sx={{ fontSize: "40px", color: "black" }} />
-            </Button>
+              <img width={40} src={AddToCartIcon} alt="CartIcon" />
+            </button>
           )}
-
-          <Button variant="outlined">
-            <FavoriteIcon sx={{ fontSize: "40px", color: "black" }} />
-          </Button>
+          {checkProductInCart(product.id) ? (
+            <button className="card-like"
+              
+              onClick={() => addAndDeleteProductInLike(product)}
+            >
+              <img width={40} src={LikeIcon} alt="CartIcon" />
+            </button>
+          ) : (
+            <button className="card-like"
+              
+              onClick={() => addAndDeleteProductInLike(product)}
+            >
+              <img width={40} src={NotLike} alt="CartIcon" />
+            </button>
+          )}
+         
         </div>
+        <p className="product-name">{product.name}</p>
+        <h3 className="card-price"> <strong>Price:</strong> {product.price}som</h3>
+        <p className="card-text">{product.description}...</p>
+       
       </div>
     </div>
   );
