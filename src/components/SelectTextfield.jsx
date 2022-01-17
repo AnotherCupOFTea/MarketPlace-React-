@@ -25,32 +25,35 @@ const currencies = [
   },
 ];
 
-export default function SelectTextField({ handleInput }) {
+export default function SelectTextFields({ handleInput, id }) {
   const [currency, setCurrency] = React.useState("Pizza");
 
   const handleChange = (event) => {
     setCurrency(event.target.value);
   };
 
-  return (
-    <TextField
-      id="outlined-select-currency"
-      name="category"
-      fullWidth
-      select
-      label="Select"
-      value={currency}
-      sx={{ mt: 2 }}
-      onChange={(event) => {
-        handleChange(event);
-        handleInput(event);
-      }}
-    >
-      {currencies.map((option) => (
-        <MenuItem key={option.value} value={option.value}>
-          {option.label}
-        </MenuItem>
-      ))}
-    </TextField>
-  );
+  if (id === "add") {
+    return (
+      <TextField
+        id="outlined-select-currency"
+        name="category"
+        fullWidth
+        select
+        label="Select"
+        sx={{ mt: 2 }}
+        value={currency}
+        onChange={(event) => {
+          handleChange(event);
+          handleInput(event);
+        }}
+      >
+        {currencies.map((option) => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+      </TextField>
+    );
+  } else if (id === "change") {
+  }
 }

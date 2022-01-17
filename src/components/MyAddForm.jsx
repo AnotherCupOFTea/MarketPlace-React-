@@ -84,7 +84,7 @@ const MyAddForm = () => {
             variant="standard"
             value={newProduct.image}
           />
-          <SelectTextField handleInput={handleInput} />
+          <SelectTextField handleInput={handleInput} id={"add"} />
           <Button
             onClick={handleSubmit}
             className="form-add_button"

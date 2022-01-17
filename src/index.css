@@ -238,12 +238,6 @@ a {
 
 }
 
-<<<<<<< HEAD
-.cart-menu {
-  display: flex;
-  justify-content: space-between;
-}
-=======
 /* Card */
 
 .card {
@@ -337,4 +331,3 @@ a {
 .text-menu{
   background: rgb(182, 182, 182);
 }
->>>>>>> 2d36318379822d64be7d1095567eb28ab9040f6c

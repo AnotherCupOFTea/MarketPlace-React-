@@ -127,6 +127,62 @@
       "price": 135,
       "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/8236fffec89f4bc78b0e7af8ea8432e3_292x292.jpeg",
       "id": 19
+    },
+    {
+      "name": "123123",
+      "description": "123",
+      "category": "Pizza",
+      "price": 123,
+      "image": "123",
+      "id": 20
+    },
+    {
+      "name": "123",
+      "description": "123",
+      "category": "Pizza",
+      "price": 123,
+      "image": "123",
+      "id": 21
+    },
+    {
+      "name": "123",
+      "description": "123",
+      "category": "Drinks",
+      "price": 123,
+      "image": "123",
+      "id": 22
+    },
+    {
+      "name": "1231",
+      "description": "123",
+      "category": "Pizza",
+      "price": 123,
+      "image": "123",
+      "id": 23
+    },
+    {
+      "name": "123",
+      "description": "123",
+      "category": "Other",
+      "price": 123,
+      "image": "123",
+      "id": 24
+    },
+    {
+      "name": "123123",
+      "description": "123",
+      "category": "Other",
+      "price": 123,
+      "image": "123",
+      "id": 25
+    },
+    {
+      "name": "123",
+      "description": "123",
+      "category": "Pizza",
+      "price": 321,
+      "image": "321",
+      "id": 26
     }
   ]
 }
