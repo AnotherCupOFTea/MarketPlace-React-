@@ -361,3 +361,52 @@ filter-products {
 }
 /* modal */
 
+.cont{
+  display: flex;
+}
+
+.emty{
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.emty h2{
+  padding: 0;
+  margin: 0;
+  padding-left: 100px;
+  
+}
+
+/* footer */
+
+.footer{
+  width: 100%;
+  background: #000;
+  
+  margin-top: 50px;
+  color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footers{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text{
+  width: 600px;
+  
+}
+
+.footer-logo{
+  background: #fff;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.footer-cont ul li:hover{
+  color: rgb(255, 132, 0);
+}

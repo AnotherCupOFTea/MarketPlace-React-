@@ -12,59 +12,52 @@ const ProductCard = ({ product }) => {
     addAndDeleteProductInCard,
     addAndDeleteProductInLike,
     checkProductInCart,
+    checkProductInLike,
   } = React.useContext(ClientContext);
 
   return (
-    <>
-      <div>
-        <div className="card">
-          <img
-            width="100%"
-            src={product.image}
-            alt="photo"
-            className="card-img"
-          />
-          <div className="card-buttons">
-            {checkProductInCart(product.id) ? (
-              <button
-                className="card-cart"
-                onClick={() => addAndDeleteProductInCard(product)}
-              >
-                <img width={40} src={TickCartIcon} alt="CartIcon" />
-              </button>
-            ) : (
-              <button
-                className="card-cart"
-                onClick={() => addAndDeleteProductInCard(product)}
-              >
-                <img width={40} src={AddToCartIcon} alt="CartIcon" />
-              </button>
-            )}
-            {checkProductInCart(product.id) ? (
-              <button
-                className="card-like"
-                onClick={() => addAndDeleteProductInLike(product)}
-              >
-                <img width={40} src={LikeIcon} alt="CartIcon" />
-              </button>
-            ) : (
-              <button
-                className="card-like"
-                onClick={() => addAndDeleteProductInLike(product)}
-              >
-                <img width={40} src={NotLike} alt="CartIcon" />
-              </button>
-            )}
-          </div>
-          <p className="product-name">{product.name}</p>
-          <h3 className="card-price">
-            {" "}
-            <strong>Price:</strong> {product.price}som
-          </h3>
-          <p className="card-text">{product.description}...</p>
+    <div>
+      <div className="card">
+        <img
+          width="100%"
+          src={product.image}
+          alt="photo"
+          className="card-img"
+        />
+        <div className="card-buttons">
+          {checkProductInCart(product.id) ? (
+            <button
+              className="card-cart"
+              onClick={() => addAndDeleteProductInCard(product)}
+            >
+              <img width={40} src={TickCartIcon} alt="CartIcon" />
+            </button>
+          ) : (
+            <button
+              className="card-cart"
+              onClick={() => addAndDeleteProductInCard(product)}
+            >
+              <img width={40} src={AddToCartIcon} alt="CartIcon" />
+            </button>
+          )}
+          {checkProductInLike(product.id) ? (
+            <button
+              className="card-like"
+              onClick={() => addAndDeleteProductInLike(product)}
+            >
+              <img width={40} src={LikeIcon} alt="CartIcon" />
+            </button>
+          ) : (
+            <button
+              className="card-like"
+              onClick={() => addAndDeleteProductInLike(product)}
+            >
+              <img width={40} src={NotLike} alt="CartIcon" />
+            </button>
+          )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
