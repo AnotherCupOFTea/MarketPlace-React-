@@ -32,7 +32,7 @@ const reducer = (state, action) => {
       return state;
   }
 };
-export default ClientProvider;
+
 const ClientProvider = (props) => {
   const [state, dispatch] = React.useReducer(reducer, Init_State);
 
@@ -380,13 +380,11 @@ const ClientProvider = (props) => {
         productsCount: state.productsCount,
         cart: state.cart,
         likeProducts: state.likeProducts,
-        like:state.like,
+        like: state.like,
       }}
     >
       {props.children}
     </ClientContext.Provider>
   );
 }
-
-
 export default ClientProvider;
