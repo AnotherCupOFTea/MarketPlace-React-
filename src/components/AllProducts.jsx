@@ -3,10 +3,12 @@ import React, { useEffect } from "react";
 // import { AdminContext } from "../context/AdminProvider";
 import { ClientContext } from "../context/ClientProvider";
 import ProductCard from "./ProductCard";
+import ProductFilter from "./ProductFilter";
 import ProductPagination from "./ProductPagination";
 
 const AllProducts = () => {
   // const { getProducts, products } = React.useContext(AdminContext);
+
   const {
     getClientProducts,
     products,
@@ -27,6 +29,7 @@ const AllProducts = () => {
       <div className="text-menu">
         <p>Меню</p>
       </div>
+      <ProductFilter />
       <h3 className="categor-h3" id="pizza">
         Пицца
       </h3>
@@ -38,7 +41,9 @@ const AllProducts = () => {
             </div>
           </Grid>
         ))}
-        <ProductPagination iden={"pizza"} />
+        <div className="pagination-menu">
+          <ProductPagination className="pagination-item" iden={"pizza"} />
+        </div>
       </Grid>
       <h3 className="categor-h3" id="snacks">
         Закуски
@@ -51,7 +56,9 @@ const AllProducts = () => {
             </div>
           </Grid>
         ))}
-        <ProductPagination iden={"snacks"} />
+        <div className="pagination-menu">
+          <ProductPagination className="pagination-item" iden={"snacks"} />
+        </div>
       </Grid>
       <h3 className="categor-h3" id="dessert">
         Десерт
@@ -64,7 +71,9 @@ const AllProducts = () => {
             </div>
           </Grid>
         ))}
-        <ProductPagination iden={"desserts"} />
+        <div className="pagination-menu">
+          <ProductPagination className="pagination-item" iden={"desserts"} />
+        </div>
       </Grid>
       <h3 className="categor-h3" id="drinks">
         Напитки
@@ -77,7 +86,9 @@ const AllProducts = () => {
             </div>
           </Grid>
         ))}
-        <ProductPagination iden={"drinks"} />
+        <div className="pagination-menu">
+          <ProductPagination className="pagination-item" iden={"drinks"} />
+        </div>
       </Grid>
       <h3 className="categor-h3" id="other">
         Другое
@@ -90,7 +101,9 @@ const AllProducts = () => {
             </div>
           </Grid>
         ))}
-        <ProductPagination iden={"other"} />
+        <div className="pagination-menu">
+          <ProductPagination className="pagination-item" iden={"other"} />
+        </div>
       </Grid>
     </div>
   );

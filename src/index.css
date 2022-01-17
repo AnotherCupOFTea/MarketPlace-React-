@@ -331,3 +331,33 @@ a {
 .text-menu{
   background: rgb(182, 182, 182);
 }
+
+filter-products {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.price-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+
+.price-filter input {
+  width: 70px;
+}
+
+.live-search {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px
+}
+
+.pagination-menu {
+  display: flex;
+  justify-content: center;
+}
+/* modal */
+

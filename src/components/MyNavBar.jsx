@@ -30,9 +30,9 @@ const MyNavBar = () => {
                   alt="logo"
                 />
               </Link>
-              <div className="search">
+              {/* <div className="search">
                 <input type="text" placeholder="Поиск" />
-              </div>
+              </div> */}
             </div>
             <div className="navbar-right">
               {user ? (

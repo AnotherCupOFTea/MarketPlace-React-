@@ -11,6 +11,7 @@ const Init_State = {
   products: null,
   productsCount: cart ? cart.products.length : 0,
   likeProducts: null,
+  modal: null,
 };
 
 const reducer = (state, action) => {
@@ -22,6 +23,8 @@ const reducer = (state, action) => {
 
     case "GET_CART":
       return { ...state, cart: action.payload };
+    case "GET_MODAL":
+      return { ...state, modal: action.payload };
     default:
       return state;
   }
@@ -282,6 +285,16 @@ const ClientProvider = (props) => {
     localStorage.setItem("like", JSON.stringify(likecart));
   };
 
+  // ! ModalPizza
+
+  const getModal = (setModal) => {
+    let action = {
+      type: "GET_MODAL",
+      payload: setModal,
+    };
+    dispatch(action);
+  };
+
   return (
     <ClientContext.Provider
       value={{
@@ -297,6 +310,8 @@ const ClientProvider = (props) => {
         setCurrentDessertsPage,
         setCurrentDrinksPage,
         setCurrentOtherPage,
+        getModal,
+        modal: state.modal,
         cart: state.cart,
         // products: state.products,
         products: state.products,
