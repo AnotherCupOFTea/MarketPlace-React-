@@ -6,11 +6,12 @@ import { calcSubPrice, calcTotalPrice } from "../helpers/calcPrice";
 export const ClientContext = React.createContext();
 
 let cart = JSON.parse(sessionStorage.getItem("cart"));
+let like = JSON.parse(localStorage.getItem("like"));
 
 const Init_State = {
   products: null,
   productsCount: cart ? cart.products.length : 0,
-  likeProducts: null
+  like: null
 };
 
 const reducer = (state, action) => {
@@ -19,9 +20,12 @@ const reducer = (state, action) => {
       return { ...state, products: action.payload };
     case "ADD_AND_DELETE_PRODUCT_IN_CART":
       return { ...state, productsCount: action.payload }; 
-    
+    case "ADD_AND_DELETE_PRODUCT_IN_LIKE":
+      return { ...state, };
     case "GET_CART":
       return { ...state, cart: action.payload };
+    case "GET_LIKE":
+      return { ...state, like: action.payload };
     default:
       return state;
   }
@@ -155,31 +159,82 @@ const ClientProvider = (props) => {
     dispatch(action);
   };
 
-  const addAndDeleteProductInLike = (likeproduct) => {
-    let likecart = JSON.parse(localStorage.getItem("like"));
+  const addAndDeleteProductInLike = (product) => {
+    let like = JSON.parse(localStorage.getItem("like"));
 
-    let likecartProduct = {
-      likeproduct: likeproduct,
+    if (!like) {
+      like = {
+        products: [],
+        
+      };
+    }
+
+    let cartProduct = {
+      product: product,
+      
     };
 
-    likecartProduct.subPrice = calcSubPrice(likecartProduct);
+    
 
-    let check = likecart.likeProducts.find((item) => {
-      return item.product.id === likeproduct.id;
+    let check = like.products.find((item) => {
+      return item.product.id === product.id;
     });
 
-    console.log(check);
+    // console.log(check);
 
     if (!check) {
-      likecart.likeProducts.push(likecartProduct);
+      like.products.push(cartProduct);
     } else {
-      likecart.LikeProducts = cart.LikeProducts.filter((item) => {
-        return item.product.id !== likeproduct.id;
+      like.products = like.products.filter((item) => {
+        return item.product.id !== product.id;
       });
     }
 
-    localStorage.setItem("like", JSON.stringify(likecart));
+    
+    localStorage.setItem("like", JSON.stringify(like));
 
+    let action = {
+      type: "ADD_AND_DELETE_PRODUCT_IN_LIKE",
+      payload: like.products.length,
+    };
+
+    dispatch(action);
+  };
+
+  const checkProductInLike = (id) => {
+    let like = JSON.parse(localStorage.getItem("like"));
+    if (!like) {
+      like = {
+        products: [],
+      };
+    }
+
+    let check = like.products.find((item) => {
+      return item.product.id === id;
+    });
+
+    if (!check) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
+  const getLike = async () => {
+    let like = JSON.parse(localStorage.getItem("like"));
+
+    if (!like) {
+      like = {
+        products: [],
+       
+      };
+    }
+
+    let action = {
+      type: "GET_LIKE",
+      payload: like,
+    };
+    dispatch(action);
   };
 
   return (
@@ -192,10 +247,12 @@ const ClientProvider = (props) => {
         changeCountCartProduct,
         deleteProductInCart,
         addAndDeleteProductInLike,
+        checkProductInLike: checkProductInLike,
+        getLike: getLike,
         products: state.products,
         productsCount: state.productsCount,
         cart: state.cart,
-        likeProducts:state.likeProducts,
+        like:state.like,
       }}
     >
       {props.children}

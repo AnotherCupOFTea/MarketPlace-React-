@@ -7,7 +7,7 @@ import NotLike from '../images/heart (1).png'
 import { ClientContext } from "../context/ClientProvider";
 
 const ProductCard = ({ product }) => {
-  const { addAndDeleteProductInCard,addAndDeleteProductInLike, checkProductInCart } =
+  const { addAndDeleteProductInCard,addAndDeleteProductInLike, checkProductInCart, checkProductInLike } =
     React.useContext(ClientContext);
 
   return (
@@ -31,7 +31,7 @@ const ProductCard = ({ product }) => {
               <img width={40} src={AddToCartIcon} alt="CartIcon" />
             </button>
           )}
-          {checkProductInCart(product.id) ? (
+          {checkProductInLike(product.id) ? (
             <button className="card-like"
               
               onClick={() => addAndDeleteProductInLike(product)}

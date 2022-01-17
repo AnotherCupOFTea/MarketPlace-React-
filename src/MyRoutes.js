@@ -9,6 +9,7 @@ import MyNavBar from "./components/MyNavBar";
 import CartPage from "./pages/CartPage";
 import ClientProvider, { ClientContext } from "./context/ClientProvider";
 import LikePage from "./pages/LikePage";
+import Footer from "./components/Footer";
 
 const MyRoutes = () => {
   return (
@@ -26,6 +27,7 @@ const MyRoutes = () => {
               <Route path="/like" element={<LikePage />} />
 
             </Routes>
+            <Footer/>
           </BrowserRouter>
         </ClientProvider>
       </AdminProvider>
