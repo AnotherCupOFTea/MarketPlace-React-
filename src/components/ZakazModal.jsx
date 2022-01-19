@@ -12,12 +12,12 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 400,
   bgcolor: 'background.paper',
-  border: '2px solid #000',
+  borderRadius: "20px",
   boxShadow: 24,
   p: 4,
 };
 
-export default function ZakazModal({zakaz}) {
+export default function ZakazModal({zakaz, cart}) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -25,18 +25,15 @@ export default function ZakazModal({zakaz}) {
   return (
     <div>
       <div onClick={handleOpen}>
-      {
-               zakaz.map((item) => {
-                   return <div>
+      
+              
                        <div className="zakaz-name">
-                        <h1>{item.name}</h1>
-                        <p>Общая сумма: {item.totalPrice} сом</p>
+                        <h1>{zakaz.name}</h1>
+                        <p>Общая сумма: {zakaz.totalPrice} сом</p>
                        </div>
-                       {console.log(item)}
-                   </div>
-                   
-               })
-           }
+                      
+                
+           
       </div>
       <Modal
         open={open}
@@ -45,18 +42,15 @@ export default function ZakazModal({zakaz}) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          <h1>{zakaz.name}</h1>
         {
-               zakaz.map((item) => {
-                   return <div>
-                       
-                        <h1>{item.name}</h1>
-                        <p>Общая сумма: {item.totalPrice} сом</p>
-                       
-                      
-                   </div>
-                   
-               })
-           }
+            cart.map((item) => {
+                return <div>
+                    
+                    <p>Количество: {item.count} - {item.product.name}</p>
+                </div>
+            })
+        } 
         </Box>
       </Modal>
     </div>

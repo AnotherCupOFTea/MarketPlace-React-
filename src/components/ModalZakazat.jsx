@@ -31,7 +31,8 @@ export default function ModalZakazat({cart, totalPrice}) {
     number: "",
     address: "",
     totalPrice,
-    cart
+    cart,
+    count: cart.count
   });
 
   const handleInput = (event) => {
@@ -62,7 +63,8 @@ export default function ModalZakazat({cart, totalPrice}) {
         number: "",
         address: "",
         totalPrice,
-        cart
+        cart,
+        count:cart.count
     });
   };
   
@@ -86,6 +88,7 @@ export default function ModalZakazat({cart, totalPrice}) {
                 cart.map((item) =>{
                     return <div>
                       <input onChange={handleInput} type="text" placeholder='Введите адрес'  name={item.product.name} value={item.product.name}/>
+                      <input onChange={handleInput} type="text" placeholder='Введите адрес'  name={item.count} value={item.count}/>
                       
                       
                     </div> 

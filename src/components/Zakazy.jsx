@@ -15,7 +15,16 @@ const Zakazy = () => {
     }
     return (
         <div className='zakaz-cont'>
-           <ZakazModal zakaz={zakaz}/>
+            {
+               zakaz.map((item) => {
+                   return <div>
+                       
+                       <ZakazModal zakaz={item} cart={item.cart}/>
+                       {/* {console.log(item.cart)} */}
+                   </div>
+                   
+               })
+           }
            
         </div>
     );

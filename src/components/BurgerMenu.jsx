@@ -2,15 +2,18 @@ import * as React from "react";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+// import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Link } from "react-router-dom";
 import BurgerIcon from '../images/pngegg (24).png'
+import { AuthContext } from "../context/AuthProvider";
 
 const options = ["Admin panel"];
 
 const ITEM_HEIGHT = 48;
 
 export default function BurgerMenu() {
+  const {user} = React.useContext(AuthContext);
+  console.log(user)
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -47,13 +50,11 @@ export default function BurgerMenu() {
             width: "20ch",
           },
         }}
-      >
+      > 
         <Link to="/admin">
           <MenuItem onClick={handleClose}>Admin panel</MenuItem>
         </Link>
-        <Link to="/add">
-          <MenuItem onClick={handleClose}>Add product</MenuItem>
-        </Link>
+        
         <Link to="/like">
           <MenuItem onClick={handleClose}>Favorite</MenuItem>
         </Link>
