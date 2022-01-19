@@ -263,6 +263,117 @@
         }
       ],
       "id": 4
+    },
+    {
+      "name": "Ishak",
+      "number": "0555555555",
+      "address": "mikers",
+      "totalPrice": 760,
+      "cart": [
+        {
+          "product": {
+            "name": "Four Cheese",
+            "description": "Увеличенная порция моцареллы, сыры чеддер и пармезан, соус альфредо",
+            "category": "Pizza",
+            "price": 360,
+            "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/9d51c6a71e514923a655579ff838ac1c_292x292.jpeg",
+            "id": 3
+          },
+          "count": 1,
+          "subPrice": 360
+        },
+        {
+          "product": {
+            "name": "Pepperoni",
+            "description": "Something",
+            "category": "Pizza",
+            "price": 400,
+            "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/596c4ae43b6a4963824952c9fca49fd8_292x292.jpeg",
+            "id": 5
+          },
+          "count": 1,
+          "subPrice": 400
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "ghkjvm",
+      "number": "ygjhmv",
+      "address": "ygjch ",
+      "totalPrice": 1840,
+      "cart": [
+        {
+          "product": {
+            "name": "Four Cheese",
+            "description": "Увеличенная порция моцареллы, сыры чеддер и пармезан, соус альфредо",
+            "category": "Pizza",
+            "price": 360,
+            "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/9d51c6a71e514923a655579ff838ac1c_292x292.jpeg",
+            "id": 3
+          },
+          "count": "4",
+          "subPrice": 1440
+        },
+        {
+          "product": {
+            "name": "Pepperoni",
+            "description": "Something",
+            "category": "Pizza",
+            "price": 400,
+            "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/596c4ae43b6a4963824952c9fca49fd8_292x292.jpeg",
+            "id": 5
+          },
+          "count": 1,
+          "subPrice": 400
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "Saparali",
+      "number": "15525485",
+      "address": "rhgsrdg",
+      "totalPrice": 1110,
+      "cart": [
+        {
+          "product": {
+            "name": "Four Cheese",
+            "description": "Увеличенная порция моцареллы, сыры чеддер и пармезан, соус альфредо",
+            "category": "Pizza",
+            "price": 360,
+            "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/9d51c6a71e514923a655579ff838ac1c_292x292.jpeg",
+            "id": 3
+          },
+          "count": 1,
+          "subPrice": 360
+        },
+        {
+          "product": {
+            "name": "Pepperoni",
+            "description": "Something",
+            "category": "Pizza",
+            "price": 400,
+            "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/596c4ae43b6a4963824952c9fca49fd8_292x292.jpeg",
+            "id": 5
+          },
+          "count": 1,
+          "subPrice": 400
+        },
+        {
+          "product": {
+            "name": "Ham and Cheese",
+            "description": "Ветчина из цыпленка, моцарелла, соус альфредо",
+            "category": "Pizza",
+            "price": 350,
+            "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/62a2d1b3-fda4-41c9-8697-78b591595d9c.jpg",
+            "id": 6
+          },
+          "count": 1,
+          "subPrice": 350
+        }
+      ],
+      "id": 7
     }
   ],
   "menu": [
@@ -297,14 +408,6 @@
       "price": 420,
       "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/627623c8-98da-4bae-aeab-6a9b2f0d838b.jpg",
       "id": 7
-    },
-    {
-      "name": "Dodster",
-      "description": "Легендарная горячая закуска с цыплёнком, томатами, моцареллой, соусом ранч в тонкой пшеничной лепешке",
-      "category": "Snacks",
-      "price": 140,
-      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/c7438015dcc24d599daa02db7ff79be6_292x292.jpeg",
-      "id": 8
     },
     {
       "name": "Spicy Dodster",
