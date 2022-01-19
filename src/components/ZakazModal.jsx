@@ -49,7 +49,7 @@ export default function ZakazModal({zakaz, cart}) {
             cart.map((item) => {
                 return <div>
                     
-                    <p>Количество: {item.count} - {item.product.name}</p>
+                    <p>Количество: <strong>{item.count} </strong> - <strong>{item.product.name}</strong></p>
                 </div>
             })
         } 
