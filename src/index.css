@@ -506,3 +506,48 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
+
+
+@media screen and (max-width: 768px) {
+ .navbar-menu ul{
+   flex-wrap: wrap;
+ }
+
+ .navbar-menu ul li{
+   margin-top: 10px;
+   font-size: 14px;
+ }
+ .search{
+   display: none;
+ }
+ .header{
+   display: block;
+ }
+
+ .header-content{
+   width: 100%;
+ }
+
+ .header-img{
+   text-align: center;
+ }
+
+ .footers{
+   display: block;
+ }
+
+ .footer-text{
+   width: 100%;
+   text-align: center;
+ }
+
+ .footer-logo{
+   width: 140px;
+   margin: 0 auto;
+ }
+}
+
+/* 320-576 */
+@media screen and (max-width: 576px) {
+  
+}
