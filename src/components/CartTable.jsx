@@ -11,7 +11,7 @@ import { Button } from "@mui/material";
 import DeleteIcon from "../images/bin.png";
 
 export default function BasicTable({ cart }) {
-  const { changeCountCartProduct, deleteProductInCart } =
+  const { changeCountCartProduct, addAndDeleteProductInCard } =
     React.useContext(ClientContext);
 
   return (
@@ -52,7 +52,7 @@ export default function BasicTable({ cart }) {
               </TableCell>
               <TableCell align="center">{row.subPrice}</TableCell>
               <TableCell align="center">
-                <Button onClick={() => deleteProductInCart(row.product.id)}>
+                <Button onClick={() => addAndDeleteProductInCard(row.product)}>
                   <img src={DeleteIcon} alt="bin" />
                 </Button>
               </TableCell>

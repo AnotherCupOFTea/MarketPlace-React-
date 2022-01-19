@@ -10,6 +10,7 @@ import CartPage from "./pages/CartPage";
 import ClientProvider, { ClientContext } from "./context/ClientProvider";
 import LikePage from "./pages/LikePage";
 import Footer from "./components/Footer";
+import OurProductPage from "./pages/OurProductPage";
 
 const MyRoutes = () => {
   return (
@@ -25,6 +26,7 @@ const MyRoutes = () => {
               <Route path="/admin" element={<AdminPanel />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/like" element={<LikePage />} />
+              <Route path="/mytable" element={<OurProductPage/>} />
 
             </Routes>
             <Footer/>

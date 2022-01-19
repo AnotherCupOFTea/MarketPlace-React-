@@ -6,7 +6,7 @@ import LikeIcon from '../images/heart.png'
 import NotLike from '../images/heart (1).png'
 import { ClientContext } from "../context/ClientProvider";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onClick }) => {
   const { addAndDeleteProductInCard,addAndDeleteProductInLike, checkProductInCart, checkProductInLike } =
     React.useContext(ClientContext);
 
@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
     <div>
       <div className="card">
         
-        <img width="100%" src={product.image} alt="photo" className="card-img" />
+       <img onClick={onClick} width="100%" src={product.image} alt="photo" className="card-img" />
         <div className="card-buttons">
           {checkProductInCart(product.id) ? (
             <button className="card-cart"

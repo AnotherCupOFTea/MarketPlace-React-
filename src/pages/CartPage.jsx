@@ -3,6 +3,7 @@ import { ClientContext } from "../context/ClientProvider";
 import CartTable from "../components/CartTable";
 import { Container } from "@mui/material";
 import EmptyBox from '../images/pngegg (28).png'
+import CartTotalPrice from "../components/CartTotalPrice";
 
 const CartPage = () => {
   const { getCart, cart } = React.useContext(ClientContext);
@@ -24,12 +25,14 @@ const CartPage = () => {
     </div>
   }
 
+
   return (
     <div>
       <Container maxWidth="md">
         <CartTable cart={cart} />
+        <CartTotalPrice totalPrice={cart.totalPrice} cart={cart.products}/>
       </Container>
-      <Container maxWidth="xs"></Container>
+      
     </div>
   );
 };
