@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { API } from "../helpers/const";
+import { API, APIzakaz } from "../helpers/const";
 
 export const AdminContext = React.createContext();
 
@@ -11,7 +11,9 @@ const Init_State = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "GET_PRODUCTS":
-      return { ...state, products: action.payload };
+      return { ...state, products: action.payload }
+    case "GET_ZAKAZ" :
+      return {...state, zakaz: action.payload}
     default:
       return state;
   }
@@ -71,6 +73,30 @@ const AdminProvider = (props) => {
       console.log(error);
     }
   };
+  // Zakazat
+
+  const addZakaz = async (product) => {
+    try {
+      await axios.post(APIzakaz, { ...product});
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getZakaz = async () => {
+    try {
+      let response = await axios(APIzakaz);
+
+      let action = {
+        type: "GET_ZAKAZ",
+        payload: response.data,
+      };
+
+      dispatch(action);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <AdminContext.Provider
@@ -80,6 +106,9 @@ const AdminProvider = (props) => {
         deleteProduct,
         saveEditedProduct,
         products: state.products,
+        addZakaz: addZakaz,
+        getZakaz: getZakaz,
+        zakaz: state.zakaz,
       }}
     >
       {props.children}

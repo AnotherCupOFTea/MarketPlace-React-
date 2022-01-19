@@ -2,9 +2,20 @@ import { Grid } from "@mui/material";
 import React, { useEffect } from "react";
 // import { AdminContext } from "../context/AdminProvider";
 import { ClientContext } from "../context/ClientProvider";
+import OurProduct from "./OurProduct";
 import ProductCard from "./ProductCard";
 
 const AllProducts = () => {
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const [product, setProduct] = React.useState({})
   // const { getProducts, products } = React.useContext(AdminContext);
   const { getClientProducts, products } = React.useContext(ClientContext);
   useEffect(() => {
@@ -25,7 +36,11 @@ const AllProducts = () => {
             item.category === "Pizza" && (
               <Grid key={item.id} item xs={12} sm={6} md={3}>
                 <div >
-                  <ProductCard product={item} />
+                  <ProductCard product={item} onClick={()=>{
+                    handleOpen(true)
+                    setProduct(item)
+                    
+                    }} />
                 </div>
               </Grid>
             )
@@ -38,7 +53,11 @@ const AllProducts = () => {
             item.category === "Snacks" && (
               <Grid key={item.id} item xs={12} sm={6} md={3}>
                 <div >
-                  <ProductCard product={item} />
+                  <ProductCard product={item} onClick={()=>{
+                    handleOpen(true)
+                    setProduct(item)
+                    
+                    }} />
                 </div>
               </Grid>
             )
@@ -51,7 +70,11 @@ const AllProducts = () => {
             item.category === "Dessert" && (
               <Grid key={item.id} item xs={12} sm={6} md={3}>
                 <div >
-                  <ProductCard product={item} />
+                  <ProductCard product={item} onClick={()=>{
+                    handleOpen(true)
+                    setProduct(item)
+                    
+                    }} />
                 </div>
               </Grid>
             )
@@ -64,7 +87,11 @@ const AllProducts = () => {
             item.category === "Drinks" && (
               <Grid key={item.id} item xs={12} sm={6} md={3}>
                 <div >
-                  <ProductCard product={item} />
+                  <ProductCard product={item}  onClick={()=>{
+                    handleOpen(true)
+                    setProduct(item)
+                    
+                    }} />
                 </div>
               </Grid>
             )
@@ -77,12 +104,17 @@ const AllProducts = () => {
             item.category === "Other" && (
               <Grid key={item.id} item xs={12} sm={6} md={3}>
                 <div >
-                  <ProductCard product={item} />
+                  <ProductCard product={item} onClick={()=>{
+                    handleOpen(true)
+                    setProduct(item)
+                    
+                    }} />
                 </div>
               </Grid>
             )
         )}
       </Grid>
+      <OurProduct open={open} product={product} handleClose={handleClose}/>
     </div>
   );
 };

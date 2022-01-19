@@ -381,3 +381,127 @@ a {
 .footer-cont ul li:hover{
   color: rgb(255, 132, 0);
 }
+
+.modal-content{
+ margin-left: 30px;
+ 
+}
+
+.modal{
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+
+.modal-close-btn{
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 15px;
+}
+
+.total{
+  width: 100%;
+  text-align: center;
+  position: sticky;
+  bottom: 0px;
+  background: #fff;
+  border-radius: 30px;
+  border: 1px solid rgb(255, 217, 0);
+  margin-top: 10px;
+}
+
+.total-btn{
+  padding: 10px 40px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  background: rgb(255, 0, 0);
+  color: #fff;border-radius: 30px;
+  font-size: 18px;
+  transition: 0.5s all ease;
+  cursor: pointer;
+}
+
+.total-btn:hover{
+  background: transparent;
+  color: rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+}
+
+.zakaz-form input{
+  width: 300px;
+  margin-top: 10px;
+  padding: 10px;
+  border: transparent;
+  outline: transparent;
+  text-align: center;
+}
+
+.zakaz-form input::placeholder{
+  text-align: center;
+}
+
+.zakaz-form{
+  text-align: center;
+  height: 150px;
+  overflow: hidden;
+}
+
+.zakaz-form button{
+  margin-top: 10px;
+  padding: 10px 30px;
+  border:  1px solid transparent;
+  background: rgb(54, 218, 0);
+  font-size: 16px;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  position: absolute;
+  bottom: 10px;
+  right: 33%;
+}
+
+.zakaz-form button:hover{
+  background: transparent;
+  border: 1px solid rgb(54, 218, 0) ;
+  color: rgb(54, 218, 0);
+}
+
+.ourproducts{
+  padding: 10px 30px;
+  background: rgb(0, 17, 255);
+  color: #fff;
+  margin-top: 30px;
+  border-radius: 20px;
+  transition: 0.5s all ease;
+  border: 1px solid transparent;
+}
+
+.ourproducts:hover{
+  color:rgb(0, 17, 255) ;
+  border: 1px solid rgb(0, 17, 255);
+  background: transparent;
+  
+}
+
+.admin{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.zakaz-name{
+  width: 200px;
+  text-align: center;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.165);
+  padding: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.zakaz-cont{
+  display: flex;
+  flex-wrap: wrap;
+}

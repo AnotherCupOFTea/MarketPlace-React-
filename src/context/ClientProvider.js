@@ -90,6 +90,8 @@ const ClientProvider = (props) => {
     };
 
     dispatch(action);
+    console.log(cart.totalPrice)
+    getCart()
   };
 
   const checkProductInCart = (id) => {
