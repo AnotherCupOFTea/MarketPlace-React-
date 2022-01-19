@@ -42,7 +42,9 @@ export default function ZakazModal({zakaz, cart}) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <h1>{zakaz.name}</h1>
+          <h1>Покупатель: <strong>{zakaz.name}</strong></h1>
+          <h4> Адресс: <strong>{zakaz.address}</strong></h4>
+          <h4> Номер покупателя: <strong> {zakaz.number}</strong></h4>
         {
             cart.map((item) => {
                 return <div>
