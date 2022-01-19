@@ -12,6 +12,10 @@ const AdminPanel = () => {
         <Link className="ourproducts" to="/mytable">
           Наши товары
         </Link>
+        <Link className="ourproducts" to="/add">
+          Add product
+        </Link>
+        
         <h1>Заказы</h1>
         <Zakazy/>
       </Container>

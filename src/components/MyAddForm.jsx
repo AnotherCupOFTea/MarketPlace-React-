@@ -1,5 +1,6 @@
 import { Button, Container, TextField } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 import { AdminContext } from "../context/AdminProvider";
 import SelectTextField from "./SelectTextfield";
 
@@ -51,6 +52,9 @@ const MyAddForm = () => {
   return (
     <div>
       <Container maxWidth="xs">
+      <Link className="ourproducts" to="/admin">
+          Назад
+      </Link>
         <div className="form-add_title">
           <h2>Add product</h2>
         </div>
